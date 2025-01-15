@@ -9,7 +9,7 @@
 // documentation link:
 // https://github.com/DigiPen-Faculty/CProcessing/wiki
 //
-// Copyright © 2020 DigiPen, All rights reserved.
+// Copyright Â© 2020 DigiPen, All rights reserved.
 //---------------------------------------------------------
 
 #include "cprocessing.h"
@@ -26,6 +26,10 @@ void game_init(void)
 void game_update(void)
 {
 	// check input, update simulation, render etc.
+	CP_Graphics_DrawCircle(50, 50, 50);
+
+	CP_Graphics_DrawCircle(50, 50, 50);
+
 	CP_Graphics_DrawCircle(50, 50, 50);
 }
 
