@@ -18,34 +18,26 @@
 // this function will be called once at the beginning of the program
 void game_init(void)
 {
-	// initialize variables and CProcessing settings for this gamestate
+    CP_System_SetWindowSize(1920, 1080);
 }
-
-// use CP_Engine_SetNextGameState to specify this function as the update function
-// this function will be called repeatedly every frame
 void game_update(void)
 {
-	// check input, update simulation, render etc.
-	CP_Graphics_DrawCircle(50, 50, 50);
 
-	CP_Graphics_DrawCircle(50, 50, 50);
+    CP_Graphics_ClearBackground(CP_Color_Create(135, 206, 235, 255));
+    CP_Settings_Fill(CP_Color_Create(19, 133, 16, 255));
+    CP_Graphics_DrawRect(0, 950, 1920, 200);
+    CP_Settings_Fill(CP_Color_Create(255, 228, 132, 255));
+    CP_Graphics_DrawCircle(1080, 100, 100);
+    CP_Settings_Fill(CP_Color_Create(0, 0, 0, 255));
+    CP_Graphics_DrawRect(500, 750, 100, 200);
 
-	CP_Graphics_DrawCircle(50, 50, 50);
 }
-
-// use CP_Engine_SetNextGameState to specify this function as the exit function
-// this function will be called once just before leaving the current gamestate
 void game_exit(void)
 {
-	// shut down the gamestate and cleanup any dynamic memory
+    // Nothing to clean up in this example
 }
-
-// main() the starting point for the program
-// CP_Engine_SetNextGameState() tells CProcessing which functions to use for init, update and exit
-// CP_Engine_Run() is the core function that starts the simulation
 int main(void)
 {
-	CP_Engine_SetNextGameState(game_init, game_update, game_exit);
-	CP_Engine_Run();
-	return 0;
+    CP_Engine_SetNextGameState(game_init, game_update, game_exit);
+    CP_Engine_Run();
 }
