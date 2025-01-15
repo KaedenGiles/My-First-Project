@@ -30,8 +30,7 @@ void game_update(void)
 
 	CP_Graphics_DrawCircle(50, 50, 50);
 
-	CP_Graphics_DrawCircle(50, 50, 50);
-}
+ }
 
 // use CP_Engine_SetNextGameState to specify this function as the exit function
 // this function will be called once just before leaving the current gamestate
